@@ -7,5 +7,6 @@ const prompts = {
 	"Gigantic inflatable dice": "giantdice.png",
 	"Cupcake tornado": "cupcakes.png",
 	"Cyberpunk street market": "streetmarket.png",
-	"Fluffy cloud chair": "cloudchair.png"
+	"Fluffy cloud chair": "cloudchair.png",
+	"Robot birdhouse": "birdhouse.png"
 }
