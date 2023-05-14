@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+	<head>
+		<style>
+			body {
+				background-color: #222222;
+			}
+			* {
+				font-family: Arial;
+				color: white;
+			}
+			
+			.guess-row {
+				margin-bottom: 2px
+				text-align: center;
+			}
+			.character {
+				display: inline-block;
+				text-align: center;
+				background-color: white;
+				width: 25px;
+				height: 21px;
+				color: black;
+				vertical-align: middle;
+				margin: 2px;
+				padding-top: 4px;
+				font-weight: bold;
+			}
+			.win-screen {
+				position: absolute;
+				background-color: #000000;
+				width: 40%;
+				height: 80%;
+				top: 10%;
+				left: 30%;
+			}
+			.results .character {
+				width: 14px;
+				height: 14px;
+				font-size: 1px;
+			}
+			.play-again-button {
+				border: none;
+				width: 30%;
+				height: 10%;
+				background-color: green;
+				cursor: pointer;
+				font-size: 120%;
+				position: absolute;
+				bottom: 5px;
+				left: 35%;
+			}
+		</style>
+		<script src="prompts.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body onload="startgame()">
+		<center>
+		<h2>Wordalle remade - guess the prompt!</h2>
+		<img width="600" id="image-view"></img>
+		<div id="guesses" class="guesses">
+			
+		</div>
+		<div id="win-screen" class="win-screen" style="display: none;">
+			<h1 id="win-screen-text">You won!</h1>
+			<h2 id="win-screen-prompt"></h2>
+			<div id="results" class="results">
+			</div>
+			<button class="play-again-button" onclick="restart()">New game</button>
+		</div>
+		
+		<h3>How to play</h3>
+		<h4>Wordalle is about guessing the prompt used to create an AI image. Simply use your keyboard (mobile isn't supported yet) to enter your guess, and press enter to try. If the right letter is in the right position, it'll turn green. If a letter is right but not in the right position, it will turn yellow and if it's completely wrong it'll be grey. While the game tries not to repeat prompts, once you run out of prompts it will reuse some.
+		<br><br>You don't need to worry about spaces, the game will put them in for you.</h4>
+		</center>
+	</body>
+</html>
