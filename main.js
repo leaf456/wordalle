@@ -4,20 +4,28 @@ let isgameplaying = false
 let notusedprompts = []
 function checkanswer() {
 	let correctletters = 0
+	let roundproxy = JSON.parse(JSON.stringify(round))
 	for (let i = 0; i < round.currentstring.length; i++) {
 		let currentelement = round.characters[`${round.currenttry - 1}-${i}`] //This characters html div.
 		if (currentelement) {
-			currentelement.style.backgroundColor = "grey"
-			if (round.currentprompt[0].toUpperCase().includes(round.currentstring.charAt(i))) {
-				currentelement.style.backgroundColor = "yellow"
-			}
-			if (round.currentstring.charAt(i) == round.currentprompt[0].charAt(i).toUpperCase()) {
-				currentelement.style.backgroundColor = "green"
-				correctletters++
-			}
+			setTimeout(function() {
+				currentelement.classList.add("character-flip")
+				setTimeout(function() {
+					currentelement.style.backgroundColor = "grey"
+					if (roundproxy.currentprompt[0].toUpperCase().includes(roundproxy.currentstring.charAt(i))) {
+						currentelement.style.backgroundColor = "yellow"
+					}
+					if (roundproxy.currentstring.charAt(i) == roundproxy.currentprompt[0].charAt(i).toUpperCase()) {
+						currentelement.style.backgroundColor = "green"
+						correctletters++
+					}
+				}, 200)
+			}, i * 100)
 		}
 	}
-	if (correctletters == round.currentprompt[0].length) {
+	setTimeout(function() {
+		console.log(correctletters, round.currentprompt[0].length)
+		if (correctletters == round.currentprompt[0].length) {
 		let wintext
 		switch(round.currenttry) {
 			case 1: wintext = "First try!"; break
@@ -46,7 +54,7 @@ function checkanswer() {
 			round.currenttry++
 			round.currentstring = ""
 		}
-	}
+	}}, roundproxy.currentstring.length * 100 + 1000)
 }
 function restart() {
 	document.getElementById("guesses").innerText = ""
@@ -119,7 +127,7 @@ function startgame() {
 	console.log("%cGet outa here!", "background: black; color: white; font-size: 500%")
 	console.log("%cYou're not a real hacker!", "background: black; color: green; font-size: 350%")
 	console.log("%cOh, iM sO cOoL bY bEiNg In ChRoMe DeVtOoLs!!!11", "background: black; color: red; font-size: 200%")
-	console.log("%cNo, no you're not. So get out of here!", "background: black; color: blue; font-size: 200%")
+	console.log("%cNo, no you're not. Get out of here!", "background: black; color: blue; font-size: 200%")
 	console.log("hello fellow chrome devtools / source code inspector! I'm just a happy little script with ABSOLUTELY nothing special in it.")
 	console.log("Also if you're trying to look at my source code, save yourself some time and look at the github page for it.")
 	notusedprompts = JSON.parse(JSON.stringify(prompts))

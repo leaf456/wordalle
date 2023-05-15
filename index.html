@@ -24,6 +24,11 @@
 				margin: 2px;
 				padding-top: 4px;
 				font-weight: bold;
+				transition: transform 0.8s;
+				transform-style: preserve-3d;
+			}
+			.character-flip {
+				transform: rotateY(180deg) scaleX(-1);
 			}
 			.win-screen {
 				position: absolute;
