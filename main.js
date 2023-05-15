@@ -117,7 +117,7 @@ function startround() {
 			characterelement.classList.add("character")
 			round.characters[`${y}-${x}`] = characterelement //Add element to round directory for easy access
 			if (round.currentprompt[0].charAt(x) == " ") {
-				characterelement.innerText = "•"
+				characterelement.innerHTML = "&#x2022;"
 			}
 			row.appendChild(characterelement)
 		}
