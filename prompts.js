@@ -11,5 +11,7 @@ const prompts = {
 	"Banana hammok": "banana.png",
 	"Sandcastle city": "sand.png",
 	"Unisoccer": "soccer.png",
-	"Purrianist": "piano.png"
+	"Purrianist": "piano.png",
+	"Master chef dragon": "chef.png",
+	"Penguin pizza surfing": "surf.png"
 }
