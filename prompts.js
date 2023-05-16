@@ -16,5 +16,6 @@ const prompts = {
 	"Penguin pizza surfing": "surf.png",
 	"Koalas doing yoga": "koala.png",
 	"Lions playing fun game": "lion.png",
-	"Squirrel rock climbing": "rockclimbing.png"
+	"Squirrel rock climbing": "rockclimbing.png",
+	"Astronaut in a tutu": "space.png"
 }
