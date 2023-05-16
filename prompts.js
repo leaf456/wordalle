@@ -1,6 +1,6 @@
 const prompts = {
 	"Disco bowling ball": "discobowlingball.png",
-	"Banana phone booth": "bananaphonebooth.png",
+	"Banana using phone booth": "bananaphonebooth.png",
 	"Pikachu space suit": "pikachuspace.png",
 	"Minion lampshade": "minionlampshade.png",
 	"Gigantic inflatable dice": "giantdice.png",
@@ -13,5 +13,8 @@ const prompts = {
 	"Unisoccer": "soccer.png",
 	"Purrianist": "piano.png",
 	"Master chef dragon": "chef.png",
-	"Penguin pizza surfing": "surf.png"
+	"Penguin pizza surfing": "surf.png",
+	"Koalas doing yoga": "koala.png",
+	"Lions playing fun game": "lion.png",
+	"Squirrel rock climbing": "rockclimbing.png"
 }
